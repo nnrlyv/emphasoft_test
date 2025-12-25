@@ -1,0 +1,42 @@
+EmphaSoft_TestTask
+---------------------
+FastAPI backend project
+
+## 📁 Project Structure
+- *app/core/* → config, utils, security, dependencies
+- *app/db/* → database models and session
+- *app/api/* → routes (auth, admin, main routes)
+- *app/schemas/* → Pydantic schemas (request/response)
+- *alembic/* → migrations
+- *venv/* → virtual environment
+
+## ⚙️ What was done
+- Created a FastAPI project
+- Connected PostgreSQL database
+- Made models for database (models_db.py)
+- Configured database session (session_db.py)
+- Made API routes:
+  - auth.py → login and register
+  - admin.py → admin functions
+  - routes.py → main endpoints
+- Created schemas for requests and responses (schemas/)
+- Every item was done that was on test task
+
+## Additionally:
+- Initialized Alembic for migrations
+- Added password hashing for security
+
+
+
+## Technologies
+- Python 3
+- FastAPI
+- PostgreSQL
+- Alembic (migrations)
+- Hashing for passwords
+
+
+## If you want to try Admin Part:
+
+- email "admin@example.com"
+- password "stringst"
