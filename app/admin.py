@@ -4,7 +4,7 @@ from app.core.security_password import hash_password
 
 db = next(get_db())
 
-# создаём администратора
+
 admin_user = UserModel(
     email="admin@example.com",
     hashed_password=hash_password("stringst"),
