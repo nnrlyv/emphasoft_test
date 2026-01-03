@@ -6,9 +6,7 @@ from app.core.config import config  # твоё окружение с JWT_SECRET 
 
 
 def create_access_token(user_uid: uuid.UUID, user_data: dict, expiry: timedelta = None) -> str:
-    """
-    Создаёт JWT токен с заданной полезной нагрузкой и сроком действия
-    """
+    
     payload = {
         "sub": str(user_uid),
         "user": user_data,
@@ -18,9 +16,7 @@ def create_access_token(user_uid: uuid.UUID, user_data: dict, expiry: timedelta 
     return token
 
 def decode_token(token: str) -> dict:
-    """
-    Декодирует JWT токен и проверяет его валидность
-    """
+    
     try:
         payload = jwt.decode(token, config.JWT_SECRET, algorithms=[config.JWT_ALGORITHM])
         return payload
