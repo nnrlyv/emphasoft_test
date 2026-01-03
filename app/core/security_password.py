@@ -7,9 +7,6 @@ pwd_context = CryptContext(
 )
 
 def _normalize_password(password: str) -> str:
-    """
-    Приводим пароль к фиксированной длине (bcrypt ≤ 72 bytes)
-    """
     return hashlib.sha256(password.encode("utf-8")).hexdigest()
 
 def hash_password(password: str) -> str:
