@@ -8,7 +8,7 @@ from app.core.utils import decode_token
 
 app = FastAPI()
 
-# Создаём "чистый" Bearer токен для Swagger
+# Bearer токен для Swagger
 bearer_scheme = HTTPBearer()
 
 def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),db: Session = Depends(get_db)):
